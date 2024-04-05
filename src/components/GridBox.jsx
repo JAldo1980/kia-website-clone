@@ -6,11 +6,11 @@ const GridBox = () => {
   return (
     <div className="grid">
       {/* BOX 1 */}
-      <div className="border-2 relative row-span-full ">
+      <div className="relative row-span-full z-0">
         <img
           src="/DiscoverEV_HeroImage_1920x364.jpg"
           alt="discover-ev-banner"
-          className=""
+          className="z-10"
         />
         <div className="absolute bottom-5 left-0 right-0 text-center">
           <div className=" text-white">
@@ -25,7 +25,7 @@ const GridBox = () => {
       </div>
       <div className=" grid grid-cols-2">
         {/* BOX 2 */}
-        <div className="border-2 relative bg-black">
+        <div className="relative bg-black">
           <img
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
@@ -38,7 +38,7 @@ const GridBox = () => {
           </div>
         </div>
         {/* BOX 3 */}
-        <div className="border-2 relative">
+        <div className="relative">
           <img
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
@@ -50,7 +50,7 @@ const GridBox = () => {
           </div>
         </div>
         {/* BOX 4 */}
-        <div className="border-2 relative bg-black z-0">
+        <div className="relative bg-black z-0">
           <img
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
@@ -63,7 +63,7 @@ const GridBox = () => {
           </div>
         </div>
         {/* BOX 5 */}
-        <div className="border-2 relative">
+        <div className="relative">
           <img src="/7yearwarranty_480x262.png" alt="7-year-warranty-banner" />
           <div className="absolute bottom-0 left-0 right-0 text-center"></div>
         </div>

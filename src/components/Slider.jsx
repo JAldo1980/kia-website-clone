@@ -22,14 +22,14 @@ const Slider = () => {
           alt="kia car image"
           key={SliderData[currentSlide].id}
         />
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
-          <h2 className="text-white text-3xl">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center W-1/2">
+          <h2 className="text-white text-3xl font-bolder">
             {SliderData[currentSlide].headline}
           </h2>
           {SliderData[currentSlide].text && (
-            <p className="text-white">{SliderData[currentSlide].text}</p>
+            <p className="mt-4 text-white">{SliderData[currentSlide].text}</p>
           )}
-          <button className="bg-white text-black py-2 px-4">
+          <button className="mt-8 bg-white text-black py-2 px-4 w-5/6">
             {SliderData[currentSlide].buttonText}
           </button>
         </div>
