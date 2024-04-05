@@ -30,7 +30,7 @@ const MidFooter = () => {
           className="cursor-pointer"
         />
       </div>
-      <div className="flex flex-wrap gap-2 pt-4 text-sm">
+      <div className="flex flex-wrap gap-6 pt-4 text-sm">
         <p className="cursor-pointer">Sign Up to the Kia Experience</p>
         <p className="cursor-pointer">Contact Us</p>
         <p className="cursor-pointer">Privacy</p>

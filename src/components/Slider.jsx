@@ -4,6 +4,18 @@ import MobileNav from "./MobileNav";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,12 +25,20 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const getImageSource = () => {
+    if (windowWidth >= 767) {
+      return SliderData[currentSlide].desktopImage;
+    } else {
+      return SliderData[currentSlide].mobileImage;
+    }
+  };
+
   return (
     <div className="relative">
       <MobileNav />
       <div className="relative">
         <img
-          src={SliderData[currentSlide].mobileImage}
+          src={getImageSource()}
           alt="kia car image"
           key={SliderData[currentSlide].id}
         />

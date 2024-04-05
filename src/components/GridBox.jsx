@@ -1,10 +1,9 @@
-// GridBox.jsx
 import React from "react";
 import Button from "./Button";
 
 const GridBox = () => {
   return (
-    <div className="grid">
+    <div className="grid lg:grid-cols-5">
       {/* BOX 1 */}
       <div className="relative row-span-full z-0">
         <img
@@ -23,7 +22,7 @@ const GridBox = () => {
           </div>
         </div>
       </div>
-      <div className=" grid grid-cols-2">
+      <div className="grid grid-cols-2 lg:grid-cols-4">
         {/* BOX 2 */}
         <div className="relative bg-black">
           <img
@@ -64,7 +63,7 @@ const GridBox = () => {
         </div>
         {/* BOX 5 */}
         <div className="relative">
-          <img src="/7yearwarranty_480x262.png" alt="7-year-warranty-banner" />
+          <img src="/7yearwarranty_480x262.jpg" alt="7-year-warranty-banner" />
           <div className="absolute bottom-0 left-0 right-0 text-center"></div>
         </div>
       </div>

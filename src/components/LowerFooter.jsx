@@ -2,7 +2,7 @@ import React from "react";
 
 const LowerFooter = () => {
   return (
-    <>
+    <div className="bg-black">
       <div className="px-4 py-4 bg-black flex items-center gap-1">
         <img
           src="https://www.kia.com/etc.clientlibs/settings/wcm/designs/kia-uk/clientlib/resources/rbr/icons/icon-home-light.svg"
@@ -19,9 +19,9 @@ const LowerFooter = () => {
           className="w-6 h-4"
         />
         <p className="text-white font-bold">UNITED KINGDOM</p>
-        <p>&copy; KIA UK 2024</p>
       </div>
-    </>
+      <p className="text-gray-300 p-4 opacity-50">&copy; KIA UK 2024</p>
+    </div>
   );
 };
 

@@ -1,9 +1,8 @@
-// MobileNav.jsx
 import React from "react";
 
 const MobileNav = () => {
   return (
-    <div className="px-4 py-2 flex justify-between items-center  z-20 opacity-100 absolute w-full border-b-2">
+    <div className="px-4 py-4 flex justify-between items-center z-20 opacity-100 absolute w-full border-b border-opacity-50">
       <div className="text-2xl text-white cursor-pointer">☰</div>
       <img
         className="h-4"

@@ -8,7 +8,7 @@ const DropDownSection = ({ title, links }) => {
   };
 
   return (
-    <div className=" bg-black text-white p-4 border-b border-white ">
+    <div className=" bg-black text-white p-4 border-b border-white border-opacity-20 ">
       <div className="flex justify-between mb-2 font-bold uppercase">
         {" "}
         <h2>{title}</h2>
