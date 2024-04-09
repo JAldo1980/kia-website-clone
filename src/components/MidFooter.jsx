@@ -31,18 +31,22 @@ const MidFooter = () => {
         />
       </div>
       <div className="flex flex-wrap gap-6 pt-4 text-sm">
-        <p className="cursor-pointer">Sign Up to the Kia Experience</p>
-        <p className="cursor-pointer">Contact Us</p>
-        <p className="cursor-pointer">Privacy</p>
-        <p className="cursor-pointer">Modern Slavery Statement</p>
-        <p className="cursor-pointer">Customer Services</p>
-        <p className="cursor-pointer">FAQs</p>
-        <p className="cursor-pointer">Terms of Use</p>
-        <p className="cursor-pointer">Cookies</p>
-        <p className="cursor-pointer">Tax Strategy</p>
-        <p className="cursor-pointer">Accessibility</p>
-        <p className="cursor-pointer">Kia Connect</p>
-        <p className="cursor-pointer">Legal Documents</p>
+        <p className="cursor-pointer hover:underline">
+          Sign Up to the Kia Experience
+        </p>
+        <p className="cursor-pointer hover:underline">Contact Us</p>
+        <p className="cursor-pointer hover:underline">Privacy</p>
+        <p className="cursor-pointer hover:underline">
+          Modern Slavery Statement
+        </p>
+        <p className="cursor-pointer hover:underline">Customer Services</p>
+        <p className="cursor-pointer hover:underline">FAQs</p>
+        <p className="cursor-pointer hover:underline">Terms of Use</p>
+        <p className="cursor-pointer hover:underline">Cookies</p>
+        <p className="cursor-pointer hover:underline">Tax Strategy</p>
+        <p className="cursor-pointer hover:underline">Accessibility</p>
+        <p className="cursor-pointer hover:underline">Kia Connect</p>
+        <p className="cursor-pointer hover:underline">Legal Documents</p>
       </div>
     </div>
   );

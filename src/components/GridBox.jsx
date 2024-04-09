@@ -1,27 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 
 const GridBox = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 640); // Adjust the threshold as needed
+    };
+
+    handleResize(); // Check on component mount
+    window.addEventListener("resize", handleResize); // Add event listener for window resize
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up the event listener
+    };
+  }, []);
+
   return (
-    <div className="grid lg:grid-cols-5">
-      {/* BOX 1 */}
-      <div className="relative row-span-full z-0">
-        <img
-          src="/DiscoverEV_HeroImage_1920x364.jpg"
-          alt="discover-ev-banner"
-          className="z-10"
-        />
-        <div className="absolute bottom-5 left-0 right-0 text-center">
-          <div className=" text-white">
-            <h3 className="text-xl font-bold">DISCOVER EV WITH KIA</h3>
-            <Button
-              label="DISCOVER MORE"
-              type="button"
-              className="mt-2 bg-white p-2 text-black font-bold px-4"
-            />
+    <div className="grid md:grid-cols-3 lg:grid-cols-5">
+      {/* Conditionally render image based on screen size */}
+      {isSmallScreen ? (
+        <div className="relative row-span-full z-0">
+          <img
+            src="/DiscoverEV_FeatureBlock_680x262.jpg"
+            alt="discover-ev-banner"
+            className="z-10"
+          />
+          <div className="absolute bottom-10 left-0 right-0 text-center">
+            <div className=" text-white">
+              <h3 className="font-bold text-sm sm:text-xl">
+                DISCOVER EV WITH KIA
+              </h3>
+              <Button
+                label="DISCOVER MORE"
+                type="button"
+                className="mt-2 bg-white p-2 text-black font-bold px-4"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="relative row-span-full z-0">
+          <img
+            src="/DiscoverEV_HeroImage_1920x364.jpg"
+            alt="discover-ev-banner"
+            className="z-10"
+          />
+          <div className="absolute bottom-5 left-0 right-0 text-center">
+            <div className=" text-white">
+              <h3 className="font-bold text-sm sm:text-xl">
+                DISCOVER EV WITH KIA
+              </h3>
+              <Button
+                label="DISCOVER MORE"
+                type="button"
+                className="mt-2 bg-white p-2 text-black font-bold px-4"
+              />
+            </div>
+          </div>
+        </div>
+      )}
       <div className="grid grid-cols-2 lg:grid-cols-4">
         {/* BOX 2 */}
         <div className="relative bg-black">
@@ -30,9 +69,9 @@ const GridBox = () => {
             alt="current-offers-banner"
             className="opacity-60"
           />
-          <div className="absolute bottom-10 left-0 right-0 text-center">
+          <div className="absolute bottom-5 left-0 right-0 text-center">
             <div className="text-white p-4">
-              <h3 className="text-xl font-bold">Current Offers</h3>
+              <h3 className="font-bold text-sm sm:text-xl">CURRENT OFFERS</h3>
             </div>
           </div>
         </div>
@@ -42,9 +81,11 @@ const GridBox = () => {
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
           />
-          <div className="absolute bottom-10 left-0 right-0 text-center">
+          <div className="absolute bottom-5 left-0 right-0 text-center">
             <div className=" text-white p-4">
-              <h3 className="text-xl font-bold">FINANCE CALCULATOR</h3>
+              <h3 className="font-bold text-sm sm:text-xl">
+                FINANCE CALCULATOR
+              </h3>
             </div>
           </div>
         </div>
@@ -55,9 +96,11 @@ const GridBox = () => {
             alt="current-offers-banner"
             className="opacity-60 z-10"
           />
-          <div className="absolute bottom-10 left-0 right-0 text-center">
+          <div className="absolute bottom-5 left-0 right-0 text-center">
             <div className=" text-white p-4">
-              <h3 className="text-xl font-bold">BOOK A TEST DRIVE</h3>
+              <h3 className="font-bold text-sm sm:text-xl">
+                BOOK A TEST DRIVE
+              </h3>
             </div>
           </div>
         </div>
