@@ -1,4 +1,5 @@
 import React from "react";
+import TopBar from "./components/TopBar";
 import Slider from "./components/Slider";
 import GridBox from "./components/GridBox";
 import MainFooter from "./components/MainFooter";
@@ -12,6 +13,7 @@ import "./styles/style.css";
 function App() {
   return (
     <div>
+      <TopBar />
       <Slider />
       <GridBox />
       <MainFooter />
