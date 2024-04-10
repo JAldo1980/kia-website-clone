@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SliderData from "./SliderData";
 import MobileNav from "./MobileNav";
+import DeskTopNav from "./DeskTopNav";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,14 +37,16 @@ const Slider = () => {
   return (
     <div className="relative">
       <MobileNav />
+      {/* Conditional rendering for DeskTopNav */}
+      {windowWidth >= 1024 && <DeskTopNav />}
       <div className="relative">
         <img
           src={getImageSource()}
           alt="kia car image"
           key={SliderData[currentSlide].id}
         />
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center W-1/2">
-          <h2 className="text-white text-3xl font-bolder">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center w-1/2">
+          <h2 className="text-white text-3xl font-bold">
             {SliderData[currentSlide].headline}
           </h2>
           {SliderData[currentSlide].text && (

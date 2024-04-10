@@ -3,20 +3,20 @@ import React from "react";
 const TopBar = () => {
   return (
     <>
-      <div className="bg-black text-white flex justify-end align-center gap-12">
-        <div>Privacy Settings</div>
-        <div>About KIA</div>
-        <div>Find A Dealer</div>
-        <div>Book A Test Drive</div>
-        <div>Brochure</div>
-        <div>Search</div>
-        <div className="flex">
+      <div className="hidden lg:flex bg-black text-gray-400 justify-end align-center gap-10 px-4 py-2 uppercase text-sm font-bold">
+        <div className="cursor-pointer hover:underline">Privacy Settings</div>
+        <div className="cursor-pointer hover:underline">About KIA</div>
+        <div className="cursor-pointer hover:underline">Find A Dealer</div>
+        <div className="cursor-pointer hover:underline">Book A Test Drive</div>
+        <div className="cursor-pointer hover:underline">Brochure</div>
+        <div className="cursor-pointer hover:underline">Search</div>
+        <div className="cursor-pointer flex gap-4 items-center hover:underline">
           <img
             src="https://www.kia.com/content/dam/kwcms/kme/uk/en/assets/static/img_flag_gb.png"
             alt="union-flag"
-            className="rounded-full"
+            className="cursor-pointer rounded-full h-4"
           />
-          <div>Change Country</div>
+          <div className="cursor-pointer hover:underline">Change Country</div>
         </div>
       </div>
     </>
