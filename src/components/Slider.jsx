@@ -52,7 +52,7 @@ const Slider = () => {
           {SliderData[currentSlide].text && (
             <p className="mt-4 text-white">{SliderData[currentSlide].text}</p>
           )}
-          <button className="mt-8 bg-white text-black py-2 px-4 w-5/6">
+          <button className="mt-8 bg-white text-black py-2 px-4 w-5/6 lg:w-36 hover:underline">
             {SliderData[currentSlide].buttonText}
           </button>
         </div>

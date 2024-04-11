@@ -5,7 +5,7 @@ const DeskTopNav = () => {
 
   return (
     <div
-      className="px-4 py-4 flex justify-between text-white font-bold items-center z-20 opacity-100 absolute w-full border-b border-opacity-50 hover:bg-white hover:text-black"
+      className="px-4 py-4 flex justify-between text-white font-bold items-center z-20 opacity-100 absolute w-full border-b border-opacity-50 hover:bg-white hover:text-black duration-200"
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
     >

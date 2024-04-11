@@ -7,8 +7,10 @@ const DropDownSection = ({ title, links }) => {
     setIsOpen(!isOpen);
   };
 
+  // if screen is sm and or md (tailwind) then, execute this code:
+
   return (
-    <div className=" bg-black text-white p-4 border-b border-white border-opacity-20 ">
+    <div className="bg-black text-white p-4 border-b border-white border-opacity-20 lg:hidden ">
       <div className="flex justify-between mb-2 font-bold uppercase">
         {" "}
         <h2>{title}</h2>
@@ -28,6 +30,8 @@ const DropDownSection = ({ title, links }) => {
       )}
     </div>
   );
+
+  // else if screen is lg (tailwind) just show DropDownData as columns
 };
 
 export default DropDownSection;

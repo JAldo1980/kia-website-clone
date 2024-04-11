@@ -38,7 +38,7 @@ const GridBox = () => {
               : "/DiscoverEV_HeroImage_1920x364.jpg"
           }
           alt="discover-ev-banner"
-          className="z-10"
+          className="z-10 "
         />
         <div className="absolute bottom-5 left-0 right-0 text-center">
           <div className="text-white">
@@ -48,7 +48,7 @@ const GridBox = () => {
             <Button
               label="DISCOVER MORE"
               type="button"
-              className="mt-2 bg-white p-2 text-black font-bold px-4"
+              className="mt-2 bg-white p-2 text-black font-bold px-4 hover:underline"
             />
           </div>
         </div>
@@ -61,7 +61,7 @@ const GridBox = () => {
             alt="current-offers-banner"
             className="opacity-60"
           />
-          <div className="absolute bottom-5 left-0 right-0">
+          <div className="absolute bottom-5 left-0 right-0 md:bottom-1 lg:bottom-5">
             <div className="text-white p-4">
               <h3 className="font-bold text-sm sm:text-xl">CURRENT OFFERS</h3>
             </div>
@@ -73,7 +73,7 @@ const GridBox = () => {
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
           />
-          <div className="absolute bottom-5 left-0 right-0">
+          <div className="absolute bottom-5 left-0 right-0 md:bottom-1 lg:bottom-5">
             <div className="text-white p-4">
               <h3 className="font-bold text-sm sm:text-xl">
                 FINANCE CALCULATOR
@@ -88,7 +88,7 @@ const GridBox = () => {
             alt="current-offers-banner"
             className="opacity-60 z-10"
           />
-          <div className="absolute bottom-5 left-0 right-0">
+          <div className="absolute bottom-5 left-0 right-0 md:bottom-1 lg:bottom-5">
             <div className="text-white p-4">
               <h3 className="font-bold text-sm sm:text-xl">
                 BOOK A TEST DRIVE

@@ -7,6 +7,7 @@ import MidFooter from "./components/MidFooter";
 import LowerFooter from "./components/LowerFooter";
 import DropDownSection from "./components/DropDownSection";
 import DropDownData from "./components/DropDownData";
+import LargeScreenDropDown from "./components/LargeScreenDropDown";
 
 import "./styles/style.css";
 
@@ -25,6 +26,7 @@ function App() {
           className="p-4"
         />
       ))}
+      <LargeScreenDropDown />
       <MidFooter />
       <LowerFooter />
     </div>
