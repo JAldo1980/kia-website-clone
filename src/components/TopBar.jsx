@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const TopBar = () => {
+  const [showComponent, setShowComponent] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setShowComponent(window.innerWidth >= 1412);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  if (!showComponent) return null;
+
   return (
     <>
       <div className="hidden lg:flex bg-black text-gray-400 justify-end align-center gap-10 px-4 py-2 uppercase text-sm font-bold">

@@ -63,7 +63,9 @@ const GridBox = () => {
           />
           <div className="absolute bottom-5 left-0 right-0 md:bottom-1 lg:bottom-5">
             <div className="text-white p-4">
-              <h3 className="font-bold text-sm sm:text-xl">CURRENT OFFERS</h3>
+              <h3 className="font-bold text-sm sm:text-xl lg:text-sm">
+                CURRENT OFFERS
+              </h3>
             </div>
           </div>
         </div>
@@ -75,7 +77,7 @@ const GridBox = () => {
           />
           <div className="absolute bottom-5 left-0 right-0 md:bottom-1 lg:bottom-5">
             <div className="text-white p-4">
-              <h3 className="font-bold text-sm sm:text-xl">
+              <h3 className="font-bold text-sm sm:text-xl lg:text-sm">
                 FINANCE CALCULATOR
               </h3>
             </div>
@@ -88,9 +90,9 @@ const GridBox = () => {
             alt="current-offers-banner"
             className="opacity-60 z-10"
           />
-          <div className="absolute bottom-5 left-0 right-0 md:bottom-1 lg:bottom-5">
+          <div className="absolute bottom-5 left-0 right-0 md:bottom-4 lg:bottom-5">
             <div className="text-white p-4">
-              <h3 className="font-bold text-sm sm:text-xl">
+              <h3 className="font-bold text-sm sm:text-xl lg:text-sm">
                 BOOK A TEST DRIVE
               </h3>
             </div>
