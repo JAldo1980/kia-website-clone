@@ -23,12 +23,12 @@ const MobileNav = () => {
     <div className="px-4 py-4 flex justify-between items-center z-20 opacity-100 absolute w-full border-b border-opacity-50 ">
       <div className="text-2xl text-white cursor-pointer">☰</div>
       <img
-        className="h-6"
+        className="h-6 cursor-pointer"
         src="https://www.kia.com/etc.clientlibs/settings/wcm/designs/kia-uk/clientlib/resources/rbr/logo_kia_white-rbr.png"
         alt="kia-logo"
       />
       <img
-        className="h-4"
+        className="h-4 cursor-pointer"
         src="https://www.kia.com/etc.clientlibs/settings/wcm/designs/kia-uk/clientlib/resources/rbr/icons/header/icon_search_white.svg"
         alt="spy glass icon"
       />

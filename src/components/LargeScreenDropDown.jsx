@@ -1,39 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useMediaQuery } from "react-responsive";
+import DropDownData from "./DropDownData";
 
-const MobileNav = () => {
-  const [showComponent, setShowComponent] = useState(true);
+const LargeScreenDropDown = () => {
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 }); // LG breakpoint in Tailwind CSS
 
-  useEffect(() => {
-    function handleResize() {
-      setShowComponent(window.innerWidth > 1412);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize(); // Initial check
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  if (!showComponent) return null;
-
-  return (
-    <div className="px-4 py-4 flex justify-between items-center z-20 opacity-100 absolute w-full border-b border-opacity-50 lg:hidden">
-      <div className="text-2xl text-white cursor-pointer">☰</div>
-      <img
-        className="h-6"
-        src="https://www.kia.com/etc.clientlibs/settings/wcm/designs/kia-uk/clientlib/resources/rbr/logo_kia_white-rbr.png"
-        alt="kia-logo"
-      />
-      <img
-        className="h-4"
-        src="https://www.kia.com/etc.clientlibs/settings/wcm/designs/kia-uk/clientlib/resources/rbr/icons/header/icon_search_white.svg"
-        alt="spy glass icon"
-      />
+  return isLargeScreen ? (
+    <div className="bg-black text-white p-4">
+      {/* Render each category as a column */}
+      <div className="grid lg:grid-cols-8 gap-6">
+        {DropDownData.map((category, index) => (
+          <div key={index}>
+            <h3 className="text-lg font-bold mb-2 hover:underline">
+              {category.title}
+            </h3>
+            <ul>
+              {category.links.map((link, linkIndex) => (
+                <li key={linkIndex}>
+                  <a
+                    className="cursor-pointer pt-2 block hover:underline"
+                    href={link.url}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
-  );
+  ) : null;
 };
 
-export default MobileNav;
+export default LargeScreenDropDown;

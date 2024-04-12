@@ -48,14 +48,14 @@ const GridBox = () => {
             <Button
               label="DISCOVER MORE"
               type="button"
-              className="mt-2 bg-white p-2 text-black font-bold px-4 hover:underline"
+              className="mt-2 bg-white p-2 text-black font-bold px-4 cursor-pointer hover:underline"
             />
           </div>
         </div>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4">
         {/* BOX 2 */}
-        <div className="relative bg-black">
+        <div className="relative bg-black cursor-pointer">
           <img
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
@@ -70,7 +70,7 @@ const GridBox = () => {
           </div>
         </div>
         {/* BOX 3 */}
-        <div className="relative">
+        <div className="relative cursor-pointer">
           <img
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
@@ -84,7 +84,7 @@ const GridBox = () => {
           </div>
         </div>
         {/* BOX 4 */}
-        <div className="relative bg-black z-0">
+        <div className="relative bg-black z-0 cursor-pointer">
           <img
             src="/SalesBanner_480x262_NewCars.jpg"
             alt="current-offers-banner"
@@ -99,7 +99,7 @@ const GridBox = () => {
           </div>
         </div>
         {/* BOX 5 */}
-        <div className="relative">
+        <div className="relative cursor-pointer">
           <img src="/7yearwarranty_480x262.jpg" alt="7-year-warranty-banner" />
           <div className="absolute bottom-0 left-0 right-0"></div>
         </div>
