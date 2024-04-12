@@ -20,7 +20,7 @@ const MobileNav = () => {
   if (!showComponent) return null;
 
   return (
-    <div className="px-4 py-4 flex justify-between items-center z-20 opacity-100 absolute w-full border-b border-opacity-50 lg:hidden">
+    <div className="px-4 py-4 flex justify-between items-center z-20 opacity-100 absolute w-full border-b border-opacity-50 ">
       <div className="text-2xl text-white cursor-pointer">☰</div>
       <img
         className="h-6"
